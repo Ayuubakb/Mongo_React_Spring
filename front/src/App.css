@@ -1,0 +1,883 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  --blue:#141E46;
+  --green:#41B06E;
+  --lightGreen:#8DECB4;
+  --beige:#FFF5E0;
+  --fontBig:'Franklin Gothic Medium';
+  --fontSmall:'Trebuchet MS'
+}
+.sec{
+  min-height: calc(100vh - 100px);
+  background-color: var(--beige);
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.loginSec{
+  padding-top: 45px;
+}
+.loginSec h1{
+  text-align: center;
+  font-family: var(--fontSmall);
+  font-style: italic;
+  font-size: 40px;
+  color: var(--blue);
+  margin-bottom: 25px;
+}
+.login button{
+  padding: 10px 18px;
+  background-color: var(--green);
+  font-family:var(--fontSmall);
+  font-size: 22px;
+  border: none;
+  border-radius: 15px;
+  margin-left: 85%;
+  margin-top: 25px;
+  cursor: pointer;
+  transition: ease 0.2s;
+}
+.login button:hover{
+  background-color: var(--blue);
+  color: white;
+}
+.login{
+  margin-left: 30%;
+  width: 40%;
+  padding: 15px;
+  background-color: var(--lightGreen);
+  border-radius: 25px;
+  padding-bottom: 35px;
+}
+.login h1{
+  font-family: var(--fontBig);
+  font-size: 35px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #141E46;
+}
+.login form{
+  width: 80%;
+  margin-left: 10%;
+}
+.inputLog {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  font-family: var(--fontSmall);
+  margin-bottom: 15px;
+}
+.inputLog label{
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: rgb(48, 47, 47);
+}
+.inputLog input{
+  padding: 5px;
+  border-radius: 15px;
+  font-family: var(--fontSmall);
+  font-size: 20px;
+  border: none;
+  outline: none;
+}
+.err{
+  color:var(--beige);
+  font-family: var(--fontSmall);
+  font-size: 17px;
+  width: 80%;
+  margin-left: 10%;
+  text-align: center;
+  padding: 4px;
+  background-color: #CF0A0A;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+.waiting{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-40%);
+  border: solid 2px var(--orange);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  animation: rotate 1s ease-in-out 0s infinite;
+}
+@keyframes rotate {
+  0%{transform: rotate(0deg);}
+  100%{transform: rotate(360deg);}
+}
+.waiting div{
+  position:absolute;
+  padding: 10px;
+  background-color: #CF0A0A;
+  border: solid 1px var(--orange);
+  border-radius: 50%;
+  width: 6%;
+  height: 6%;
+  top: -4%;
+  left: -4%;
+}
+nav{
+  padding-inline: 40px;
+  padding: 15px;
+  background-color: var(--blue);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .logo{
+  color: #41B06E;
+  font-family: var(--fontBig);
+  font-size: 25px;
+  flex: 0 0 25%;
+}
+nav .links{
+  flex:  0 0 50%;
+}
+nav .links ul{
+  list-style: none;
+  margin-left: 25%;
+}
+nav .links li{
+  font-family: var(--fontSmall);
+  color: white;
+  float: left;
+  padding-inline: 20px;
+  font-size: 18px;
+}
+nav .out{
+  flex: 0 0 25%;
+}
+nav .out button{
+  background-color: var(--green);
+  color: white;
+  border-radius: 15px;
+  border: none;
+  padding: 7px 14px;
+  font-size: 17px;
+  font-family: var(--fontSmall);
+  float:right;
+  cursor: pointer;
+}
+.adminDash{
+  padding-top: 25px;
+}
+.routes{
+  width: 60%;
+  margin-left: 20%;
+  display: flex;
+  align-items: center;
+  border: solid 3px var(--blue);
+  border-radius: 25px;
+  overflow: hidden;
+}
+.routes .link{
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: var(--green);
+  font-family: var(--fontBig);
+  flex:  0 0 50%;
+  text-decoration: none;
+}
+.routes div p{
+  font-size: 45px;
+  color: var(--beige);
+  text-align: center;
+}
+.ajouterMan{
+  padding-top: 25px;
+}
+.ajouterMan h1{
+  font-family: var(--fontBig);
+  font-size: 25px;
+  color: var(--blue);
+  margin-bottom: 15px;
+  text-align: center;
+}
+.ajouterMan .formContainer{
+  width: 60%;
+  margin-left: 20%;
+  padding: 15px;
+  background-color: var(--green);
+  border-radius: 25px;
+}
+.ajouterMan .formContainer form{
+  width: 75%;
+  margin-left: 12.5%;
+}
+.ajouterMan .formContainer button{
+  padding: 10px 18px;
+  font-size: 20px;
+  font-family: var(--fontSmall);
+  color: white;
+  background-color: #141E46;
+  border: none;
+  border-radius: 15px;
+  margin-left: 90%;
+  margin-top: 15px;
+  cursor:pointer;
+}
+.listeMan{
+  padding-top: 25px;
+}
+.listeMan .search, .demandes .search{
+  width: 75%;
+  margin-left: 12.5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: var(--lightGreen);
+  border-radius: 15px;
+  margin-bottom: 25px;
+}
+.listeMan .search input, .listeMan .search select, .demandes .search select, .demandes .search input{
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  font-family: var(--fontSmall);
+  font-size: 18px;
+}
+.listeMan .search button, .demandes .search button{
+  padding: 10px 18px;
+  font-family: var(--fontSmall);
+  font-size: 19px;
+  background-color: var(--blue);
+  color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.listeMan .gridContainer{
+  width: 90%;
+  margin-left:5%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+.OneManager{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  background-color: var(--green);
+  border-radius: 15px;
+}
+.OneManager div{
+  font-family: var(--fontSmall);
+  font-size: 18px;
+  color: rgb(29, 29, 29); 
+  font-weight: bold;
+}
+.OneManager .info {
+  flex: 0 0 80%;
+}
+.OneManager .info div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+.OneManager .info div .contr{
+  flex: 0 0 15%;
+}
+.OneManager .info div .stats{
+  flex: 0 0 85%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: wheat;
+  border-radius: 10px;
+}
+.OneManager div span{
+  color: var(--blue);
+  font-size: 20px;
+  font-family: var(--fontBig);
+  font-style: italic;
+}
+.OneManager .btns{
+  flex: 0 0 10%;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: space-around;
+  align-items: center;
+}
+.OneManager .btn{
+  border-radius: 5px;
+  background-color: #CF0A0A;
+  padding: 5px;
+  width: 50px;
+  text-align: center;
+  color: beige;
+  cursor: pointer;
+}
+.carsContainer{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 90%;
+  margin-left: 5%;
+}
+.carsContainer .oneCar{
+  flex: 0 0 350px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.carsContainer .imgContainer{
+  width: 100%;
+  height: 200px;
+}
+.carsContainer .imgContainer img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.carsContainer .specs{
+  background-color: var(--green);
+  color: var(--beige);
+  font-family: var(--fontSmall);
+  font-size: 22px;
+  padding-bottom: 25px;
+  padding-top: 10px;
+}
+.carsContainer .specs h1{
+  text-align: center;
+}
+.ajouterCar .formContainer{
+  width: 90%;
+  margin-left: 5%;
+  padding: 15px;
+  background-color: #41B06E;
+  border-radius: 25px;
+  padding-bottom: 40px;
+}
+.ajouterCar .formContainer h1{
+  text-align: center;
+  font-family: var(--fontBig);
+  font-size: 35px;
+  color: #141E46;
+}
+.ajouterCar .formContainer form {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-around;
+}
+.ajouterCar .formContainer form div{
+  flex: 0 0 45%;
+}
+.ajouterCar form select, .ajouterMan select{
+  width: 45%;
+  padding: 5px;
+  border: none;
+  border-radius: 10px;
+  font-family: var(--fontSmall);
+  font-size: 19px;
+  margin-right: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.ajouterCar form textarea, .ajouterMan textarea{
+  margin-top: 15px;
+  padding: 5px;
+  font-family: var(--fontSmall);
+  font-size: 17px;
+  width: 100%;
+  height: 75px;
+  border: none;
+  border-radius: 10px;
+}
+.ajouterCar form button{
+  padding: 11px 18px;
+  font-family: var(--fontSmall);
+  background-color: #141E46;
+  border: none;
+  border-radius: 15px;
+  color: white;
+  font-size: 22px;
+  margin-top: 30px;
+  margin-left: 90%;
+}
+.ajouterCar form .img, .ajouterMan .img{
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+.ajouterCar form .img label, .ajouterMan .img label{
+  border-radius: 50%;
+  position: relative;
+  padding: 25px;
+  cursor: pointer;
+  background-color: var(--lightGreen);
+  color: #141E46;
+  font-family: var(--fontSmall);
+  font-size: 25px;
+  margin-left: 45%;
+}
+.ajouterCar form .img input, .ajouterMan .img input{
+  position: absolute;
+  top: -1000%;
+}
+.car{
+  padding-top:25px;
+}
+.car .container{
+  width: 60%;
+  margin-left: 20%;
+  background-color: white;
+  padding-bottom: 25px;
+  border-radius: 15px;
+}
+.car .container .imgContainer{
+  width: 100%;
+  height: 300px;
+  background-color: var(--blue);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.car .container .imgContainer img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.car .container .header{
+  width: 100%;
+  font-family: var(--fontBig);
+  font-size: 24px;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  background-color: #41B06E;
+}
+.car .container .specs{
+  display: flex;
+}
+.car .container .specs div{
+  flex: 0 0 50%;
+  padding: 15px;
+  padding-left: 10%;
+
+}
+.car .container .specs p{
+  margin-bottom: 15px;
+  font-family: var(--fontSmall);
+  font-size: 20px;
+  color: rgb(37, 37, 37);
+  font-weight: bold;
+}
+.car .container .specs span{
+  margin-bottom: 15px;
+  font-family: var(--fontBig);
+  font-size: 22px;
+  color: var(--blue);
+  font-style: italic;
+}
+.car .container .specs .colorBox{
+  padding: 0px;
+  border-radius:50%;
+  height: 0px;
+  width: 30px;
+  margin-left: 10px;
+  border: solid 2px black;
+}
+.car .specs .desc{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  min-height: 100px;
+  background-color: bisque;
+  border: solid 2px var(--blue);
+  border-radius: 15px;
+  color: rgb(50, 50, 50);
+  font-family: var(--fontSmall);
+  font-size: 19px;
+  width: 90%;
+}
+.car .container .btns{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+.car .container .btns button{
+  padding: 10px 18px;
+  font-family: var(--fontBig);
+  font-size: 22px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  color: white;
+}
+.addRes .holder{
+  width: 60%;
+  margin-left: 20%;
+  padding: 25px;
+}
+.addRes h1{
+  text-align: center;
+  font-family: var(--fontBig);
+  font-size: 30px;
+  color: var(--blue);
+  margin-bottom: 15px;
+}
+.addRes .holder .header{
+  background-color: #41B06E;
+  padding: 10px;
+  border-radius: 15px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.addRes .holder .header .dates{
+  margin-bottom: 15px;
+  padding: 10px;
+}
+.addRes .holder .header .dates input,.addRes .holder .header .price{
+  width: 40%;
+  padding: 5px;
+  font-family: var(--fontSmall);
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+.addRes .holder .header .price{
+  margin-left: 85px;
+  margin-bottom: 25px;
+}
+.addRes .holder .header .radios{
+  padding: 10px;
+  font-family: var(--fontSmall);
+  font-size: 19px;
+  color: var(--beige);
+  font-weight: bold;
+}
+.addRes .holder .header span{
+  font-family: var(--fontSmall);
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 10px;
+  color: white;
+}
+.addRes .header .radios input{
+  margin-left: 20px;
+  padding: 5px;
+}
+.addRes .selectClient, .addRes .addClient{
+  padding: 10px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: #8DECB4;
+  margin-top: 10px;
+  border-radius: 15px;
+}
+.addRes .addClient button{
+  width: 20%;
+  margin-left: 80%;
+  background-color: var(--green);
+  
+}
+.addRes .selectClient select{
+  width: 70%;
+  margin-left: 15%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-family: var(--fontSmall);
+  font-size: 19px;
+}
+.addRes button{
+  padding: 10px 18px;
+  font-size: 18px;
+  font-family: var(--fontBig);
+  background-color: var(--blue);
+  border: none;
+  border-radius: 15px;
+  margin-left: 90%;
+  width: 10%;
+  color: white;
+  margin-top: 15px;
+  cursor: pointer;
+}
+.demandes .demandesHolder{
+  width: 90%;
+  margin-left: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.demandes .demandesHolder .demande{
+  flex: 0 0 500px;
+  background-color: white;
+  margin-bottom: 15px;
+  border: solid 2px var(--green);
+  border-radius: 25px;
+  padding: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+.demandes .demandesHolder .demande .top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.demandes .demandesHolder .demande  p{
+  font-family: var(--fontSmall);
+  font-size: 18px;
+  color: var(--blue);
+  font-weight: bold;
+}
+.demandes .demandesHolder .demande span{
+  font-family: var(--fontSmall);
+  font-size: 19px;
+  color: black;
+  font-weight: bolder;
+  font-style: normal;
+}
+.demandes .demandesHolder .demande .by{
+  border: solid 2px var(--green);
+  background-color: white;
+  border-radius: 25px;
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  position: absolute;
+  top: 0px;
+  left: -1.5px;
+  width: 500px;
+  padding: 10px;
+  opacity: 0;
+  z-index: 4;
+  height: 180px;
+}
+.demandes .demandesHolder .demande .by div{
+  background-color: var(--green);
+  padding: 10px;
+  border-radius: 12px;
+  flex: 0 0 45%;
+  text-align: center;
+}
+.demandes .demandesHolder .demande .by .total{
+  flex: 0 0 90%;
+  background-color: #CF0A0A;
+  font-size: 18px;
+}
+.demandes .demandesHolder .demande .by p, .demandes .demandesHolder .demande .by span{
+  color: rgb(255, 255, 255);
+  font-style: italic;
+  font-size: 16px;
+}
+.demandes .demandesHolder .demande .dates div, .demandes .demandesHolder .demande .infCar div{
+  margin-bottom: 15px;
+}
+.demandes .demandesHolder .demande .btns{
+  display: flex;
+  flex-direction: column;
+}
+.demandes .demandesHolder .demande .btns .arr{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color:var(--lightGreen);
+  border-radius: 50%;
+  margin-left: 28%;
+  color:brown;
+}
+.demandes .demandesHolder .demande .btns button{
+  padding: 7px 11px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-family: var(--fontBig);
+  font-size: 17px;
+  cursor: pointer;
+}
+.resList{
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 15px;
+  display: flex;
+  gap: 5%;
+}
+.resList .resSearch{
+  flex: 0 0 15%;
+  background-color: var(--green);
+  padding: 15px;
+  border-radius: 15px;
+  position: fixed;
+  top: 100px;
+  height: calc(100vh - 200px);
+}
+.resList .resSearch div{
+  margin-bottom: 25px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.resList .resSearch div label{
+  margin-bottom:7px;
+  font-family: var(--fontSmall);
+  font-size: 18px;
+  color: var(--blue);
+  font-weight: bold;
+}
+.resList .resSearch input, .resList .resSearch select{
+  padding: 5px;
+  color: rgb(29, 29, 29);
+  border-radius: 10px;
+  border: none;
+  font-size: 18px;
+  font-family: var(--fontSmall);
+}
+.resList .resSearch .btn{
+  margin-top: 45px;
+}
+.resList .resSearch button{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--blue);
+  color: white;
+  margin-left: calc((100% - 50px) / 2);
+  border: none;
+}
+.resList .resContainer{
+  flex: 0 0 80%;
+  margin-left: 20%;
+}
+.reservation{
+  position: relative;
+  padding: 25px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  color: white;
+  font-family: var(--fontSmall);
+  font-size: 20px;
+  font-weight: bold;
+}
+.reservation .bottom{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 8px;
+}
+.reservation .top{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--blue);
+  color:white;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  gap: 10px;
+  font-size: 16px;
+  font-family: var(--fontSmall);
+  font-weight: normal;
+  text-align: center;
+}
+.reservation .top p{
+  padding-top: 5px;
+  padding-bottom:5px ;
+  text-align: center;
+  width: fit-content;
+  padding-right: 5px;
+}
+.reservation .top span{
+  background-color: rgb(53, 87, 255);
+  padding: 5px;
+  padding-inline: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  
+}
+.reservation span{
+  font-family: var(--fontBig);
+}
+.reservation .dates{
+  flex: 0 0 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.adminDash{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.bars{
+  width: 50%;
+  background-color: white;
+  padding: 10px;
+  border-radius: 15px;
+  border: solid 2px var(--green);
+}
+.nums div{
+  background-color: white;
+  padding: 40px;
+  border: solid 4px var(--blue);
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 25px;
+  border-radius: 15px;
+  font-family: var(--fontSmall);
+  font-weight: bold;
+  color: rgb(64, 64, 64);
+  width: 100%;
+}
+.nums span{
+  font-family: var(--fontBig);
+  color: var(--blue);
+  font-size: 33px;
+}
+.dashH{
+  padding: 10px;
+  background-color: #41B06E;
+  color: white;
+  font-family: var(--fontSmall);
+  font-weight: bold;
+}
+.tableHolder{
+  flex:  0 0 30%;
+  padding-bottom: 55px;
+}
+.tableHolder table{
+  width: 100%;
+  box-shadow: 1px 1px 5px var(--blue);
+}
+.tableHolder table thead{
+  background-color:var(--blue);
+  color: white;
+  font-family: var(--fontSmall);
+  font-size: 18px;
+}
+.tableHolder table thead td{
+  padding: 10px;
+  text-align: center;
+}
+.tableHolder table tr td{
+  border-bottom: solid 1px var(--blue);
+  padding: 15px;
+  text-align: center;
+  font-family: var(--fontBig);
+  font-size: 18px;
+  color: rgb(31, 31, 31);
+}
+.tableHolder h2{
+  font-family: var(--fontSmall);
+  color: #CF0A0A;
+  margin-bottom: 10px;
+}

@@ -1,33 +1,37 @@
 package com.server.ApiMongodb.Model;
 
 import org.bson.types.ObjectId;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+
+import java.util.HashMap;
+import java.util.Objects;
 
 @Document(collection = "car")
 public class Car {
+    @Id
     private ObjectId id;
-    private String name;
     private String color;
     private int horsePower;
     private String brand;
     private String model;
-    private Boolean available;
     private String description;
-    private String image;
+    private HashMap<String, Object> image;
     private String fuel;
     private int year;
     private String transmission;
+    private String idString;
 
-public Car(){
-
+    public String getIdString() {
+        return idString;
     }
 
-    public String getName() {
-        return name;
+    public void setIdString(String idString) {
+        this.idString = idString;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public Car(){
+
     }
 
     public String getColor() {
@@ -62,14 +66,6 @@ public Car(){
         this.model = model;
     }
 
-    public Boolean getAvailable() {
-        return available;
-    }
-
-    public void setAvailable(Boolean available) {
-        this.available = available;
-    }
-
     public String getDescription() {
         return description;
     }
@@ -78,11 +74,11 @@ public Car(){
         this.description = description;
     }
 
-    public String getImage() {
+    public HashMap<String, Object> getImage() {
         return image;
     }
 
-    public void setImage(String image) {
+    public void setImage(HashMap<String,Object> image) {
         this.image = image;
     }
 
@@ -111,12 +107,10 @@ public Car(){
     }
     public String toString(){
         return "Car{" +
-                "name='" + name + '\'' +
                 ", color='" + color + '\'' +
                 ", horsePower=" + horsePower +
                 ", brand='" + brand + '\'' +
                 ", model='" + model + '\'' +
-                ", available=" + available +
                 ", description='" + description + '\'' +
                 ", image='" + image + '\'' +
                 ", fuel='" + fuel + '\'' +
@@ -127,4 +121,5 @@ public Car(){
     public ObjectId getId() {
         return id;
     }
+
 }

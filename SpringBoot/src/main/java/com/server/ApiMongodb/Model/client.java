@@ -1,14 +1,39 @@
 package com.server.ApiMongodb.Model;
 
+import org.bson.types.ObjectId;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection = "client")
 public class client {
+    @Id
+    private ObjectId id;
     private  String first_name;
     private  String last_name;
     private  String email;
     private  String phone;
-    private  String address;
+    private String idString;
+
+    public ObjectId getId() {
+        return id;
+    }
+
+    public String getIdString() {
+        return idString;
+    }
+
+    public void setIdString(String idString) {
+        this.idString = idString;
+    }
+
+    public void setId(ObjectId id) {
+        this.id = id;
+    }
+
+   /* private  String address;
     private String doc_type;
     private String doc_num;
-
+*/
     public client(){
 
     }
@@ -45,7 +70,7 @@ public class client {
         this.phone = phone;
     }
 
-    public String getAddress() {
+  /*  public String getAddress() {
         return address;
     }
 
@@ -67,5 +92,5 @@ public class client {
 
     public void setDoc_num(String doc_num) {
         this.doc_num = doc_num;
-    }
+    }*/
 }

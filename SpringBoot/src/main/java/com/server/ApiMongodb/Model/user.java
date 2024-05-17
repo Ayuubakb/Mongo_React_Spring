@@ -1,23 +1,28 @@
 package com.server.ApiMongodb.Model;
 
+import org.bson.types.ObjectId;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "user")
 public class user {
+    @Id
+    private ObjectId id;
     private String login;
     private String password;
-    private int id;
     private String role;
 
-    public user(String login, String password, int id) {
-        this.login = login;
-        this.password = password;
+    public ObjectId getId() {
+        return id;
+    }
+
+    public void setId(ObjectId id) {
         this.id = id;
     }
-    public user(String login, String password, int id, String role) {
+
+    public user(String login, String password, String role) {
         this.login = login;
         this.password = password;
-        this.id = id;
         this.role = role;
     }
     public user() {

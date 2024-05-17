@@ -1,62 +1,82 @@
 package com.server.ApiMongodb.Model;
 
+import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDate;
+import java.util.Date;
 
 @Document(collection = "reservation")
 public class booking {
     @Id
-    private int id ;
-    private client client ;
-    private int id_car ;
-    private LocalDate start_date ;
-    private LocalDate end_date ;
+    private ObjectId id ;
+    private ObjectId id_client ;
+    private ObjectId id_car ;
+    private Date start_date ;
+    private Date end_date ;
     private int price ;
-    private String status ;
+    private int status ;
+    private ObjectId addedBy;
+    private ObjectId statusModifiedBy;
+
+    public ObjectId getAddedBy() {
+        return addedBy;
+    }
+
+    public void setAddedBy(ObjectId addedBy) {
+        this.addedBy = addedBy;
+    }
+
+    public ObjectId getStatusModifiedBy() {
+        return statusModifiedBy;
+    }
+
+    public void setStatusModifiedBy(ObjectId statusModifiedBy) {
+        this.statusModifiedBy = statusModifiedBy;
+    }
 
     public booking(){
 
     }
 
-    public int getId() {
+    public ObjectId getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(ObjectId id) {
         this.id = id;
     }
 
-    public com.server.ApiMongodb.Model.client getClient() {
-        return client;
+    public ObjectId getClient() {
+        return id_client;
     }
 
-    public void setClient(com.server.ApiMongodb.Model.client client) {
-        this.client = client;
+    public void setClient(ObjectId client) {
+        this.id_client = client;
     }
 
-    public int getId_car() {
+    public ObjectId getId_car() {
         return id_car;
     }
 
-    public void setId_car(int id_car) {
+    public void setId_car(ObjectId id_car) {
         this.id_car = id_car;
     }
 
-    public LocalDate getStart_date() {
+    public Date getStart_date() {
         return start_date;
     }
 
-    public void setStart_date(LocalDate start_date) {
+    public void setStart_date(Date start_date) {
         this.start_date = start_date;
     }
 
-    public LocalDate getEnd_date() {
+    public Date getEnd_date() {
         return end_date;
     }
 
-    public void setEnd_date(LocalDate end_date) {
+    public void setEnd_date(Date end_date) {
         this.end_date = end_date;
     }
 
@@ -68,11 +88,11 @@ public class booking {
         this.price = price;
     }
 
-    public String getStatus() {
+    public int getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(int status) {
         this.status = status;
     }
 }
