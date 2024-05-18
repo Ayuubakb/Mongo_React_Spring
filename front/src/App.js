@@ -18,6 +18,7 @@ import { checkLogin } from './controllers/Authentification';
 import AddCar from './pages/Manager/AddCar';
 import Car from './pages/Manager/Car';
 import AddRes from './pages/Manager/AddRes';
+import Factures from './pages/Manager/Factures';
 
 function App() {
   const [isLogged,setIsLogged]=useState(null);

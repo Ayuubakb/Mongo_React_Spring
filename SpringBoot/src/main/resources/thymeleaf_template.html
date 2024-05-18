@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Factura</title>
+    <style>
+        .facture{
+   padding-top: 50px;
+   padding-left: 10%;
+ }
+ .facture .head{
+   width: 40%;
+   margin-left: 50%;
+   background-color: #141E46;
+   color: white;
+   text-align: center;
+   padding: 20px;
+   font-size: 25px;
+   margin-bottom:15px;
+ }
+ .facture .companyInfo{
+   padding-left: 25px;
+   border: solid 1px gray;
+   padding: 10px;
+   width: 50%;
+   margin-bottom:15px;
+ }
+ .facture .companyInfo h1, .facture .clientCar h2{
+   margin-bottom: 5px;
+   color: #41B06E;
+   font-size: 25px;
+ }
+ .facture .companyInfo p, .facture .date p, .facture .clientCar p{
+   margin-bottom: 3px;
+   color: rgb(29, 29, 29);
+   font-size: 18px;
+ }
+ .facture .companyInfo .sp,.facture .clientCar .sp{
+   color: #141E46;
+   font-weight: bold;
+ }
+ .facture .date{
+   width: 40%;
+   margin-left: 50%;
+   text-align: center;
+   border: solid 1px gray;
+   padding: 10px;
+ }
+ .facture .date p{
+   font-weight: bold;
+ }
+ .facture .clientCar{
+   width: 90%;
+   padding: 15px;
+   padding-left: 25px;
+   padding-right: 25px;
+   border: solid 3px #41B06E;
+   margin-top: 25px;
+ }
+
+ .facture .clientCar h2{
+   color: #141E46;
+ }
+ .facture .addition{
+   margin-top: 15px;
+   background-color: #141E46;
+   color: white;
+   font-size: 20px;
+   width: 100%;
+   padding: 25px;
+ }
+ .facture .addition .days, .facture .addition .total{
+   border-left: solid 2px white;
+   text-align:center;
+ }
+    </style>
+</head>
+<body>
+<section class='facture'>
+    <div class='head'>
+        <h1>Facture</h1>
+    </div>
+    <div class='companyInfo'>
+        <h1>AutoRental</h1>
+        <p><span class="sp">Address :</span>  Avenue de la Palestine Mhanech I, Tetouan</p>
+        <p><span class="sp">Website :</span> AutoRental.com</p>
+    </div>
+    <div class='date'>
+        <p th:text="'Generated the '+${date} "> </p>
+        <p>In Tetouan</p>
+    </div>
+    <div class='clientCar'>
+        <div class='client'>
+            <h2>For : <span th:text="${clf}+' '+${cll}"></span></h2>
+            <p><span class="sp">E-mail : </span><span th:text="${email}"></span></p>
+            <p><span class="sp">Phone : </span><span th:text="${phone}"></span></p>
+        </div>
+        <div class='car'>
+            <h2>Rental Of:<span th:text="${cb}+' '+${cm}+' '+${cy}"></span></h2>
+            <p><span class="sp">From : </span><span th:text="${start}"></span></p>
+            <p><span class="sp">To : </span><span th:text="${end}"></span></p>
+        </div>
+    </div>
+    <table class='addition'>
+        <tr>
+            <td class='ppd'>
+                <p>Price Per Day: <span th:text="${bp}+' Dh'"></span></p>
+            </td>
+            <td class='days'>
+                <p>Period: <span th:text="${days}+' Days'"></span></p>
+            </td>
+            <td class='total'>
+                <p>Total: <span th:text="${total}+ 'Dh'"></span></p>
+            </td>
+        </tr>
+    </table>
+</section>
+</body>
+</html>

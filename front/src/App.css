@@ -881,3 +881,79 @@ nav .out button{
   color: #CF0A0A;
   margin-bottom: 10px;
 }
+.facture{
+  padding-top: 50px;
+  padding-left: 10%;
+}
+.facture .head{
+  width: 30%;
+  margin-left: 60%;
+  background-color: #141E46;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  font-size: 30px;
+}
+.facture .companyInfo{
+  padding-left: 25px;
+  border: solid 1px gray;
+  padding: 15px;
+  width: 30%;
+}
+.facture .companyInfo h1, .facture .clientCar h2{
+  margin-bottom: 15px;
+  color: #41B06E;
+  font-size: 28px;
+}
+.facture .companyInfo p, .facture .date p, .facture .clientCar p{
+  margin-bottom: 10px;
+  color: rgb(29, 29, 29);
+  font-size: 20px;
+}
+.facture .companyInfo span,.facture .clientCar span{
+  color: #141E46;
+  font-weight: bold;
+}
+.facture .date{
+  width: 30%;
+  margin-left: 60%;
+  text-align: center;
+  border: solid 1px gray;
+  padding: 15px;
+}
+.facture .date p{
+  font-weight: bold;
+}
+.facture .clientCar{
+  display: flex;
+  width: 90%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border: solid 3px #41B06E;
+  margin-top: 25px;
+}
+.facture .clientCar h2{
+  color: #141E46;
+}
+.facture .addition{
+  display: flex;
+  margin-top: 15px;
+  background-color: #141E46;
+  color: white;
+  font-size: 20px;
+  width: 90%;
+  padding: 25px;
+  justify-content: space-between;
+  align-items: center;
+}
+.facture div{
+  flex: 0 0 32%;
+  text-align: center;
+}
+.facture .addition .days, .facture .addition .total{
+  border-left: solid 2px white;
+}

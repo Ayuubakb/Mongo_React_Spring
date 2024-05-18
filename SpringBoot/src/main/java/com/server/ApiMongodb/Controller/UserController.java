@@ -99,7 +99,6 @@ public class UserController {
     public void removePassed(){
         LocalDate localDate = LocalDate.now();
         Date dateNow = java.sql.Date.valueOf(localDate);
-        System.out.println(dateNow);
         List<booking> bookings=BookingRepository.findByStatus(2);
         for (booking bo:bookings){
             if (bo.getStart_date().before(dateNow)){
