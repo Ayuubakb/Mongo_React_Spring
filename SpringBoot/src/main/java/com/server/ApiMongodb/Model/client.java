@@ -13,6 +13,15 @@ public class client {
     private  String email;
     private  String phone;
     private String idString;
+    private int status=1;
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
 
     public ObjectId getId() {
         return id;
@@ -30,10 +39,7 @@ public class client {
         this.id = id;
     }
 
-   /* private  String address;
-    private String doc_type;
-    private String doc_num;
-*/
+
     public client(){
 
     }

@@ -1,3 +1,5 @@
+
+
 const getDash=async(setDash)=>{
     const response=await fetch("http://localhost:9090/user/manDash",{
         method:"GET",
@@ -150,6 +152,52 @@ const ajouterClient=async(client,setErr,setInfos)=>{
     )
 }
 
+const deleteClient=async(id)=>{
+    const response=await fetch("http://localhost:9090/clients/deleteClient/"+id,{
+        method:"PUT",
+        credentials:"include"
+    })
+    await response.text().then(
+        (data)=>{
+            if(data=="done"){
+                document.getElementById(id).style.display="none";
+            }
+        }
+    )
+}
+
+const modifyClient=async(infos,id,setErr)=>{
+    const formData=new FormData();
+    const blob=new Blob(
+        [JSON.stringify(infos)],
+        {type:"application/json"}
+    )
+    formData.append("infos",blob)
+    formData.append("id",id)
+    const response=await fetch("http://localhost:9090/clients/updateClient",{
+        method:"POST",
+        credentials:"include",
+        body:formData
+    })
+    await response.text().then(
+        (data)=>{
+            setErr(data);
+        }
+    )
+}
+
+const findClient=async(setInfo, id)=>{
+    const response=await fetch("http://localhost:9090/clients/getClient/"+id,{
+        method:"GET",
+        credentials:"include"
+    })
+    await response.json().then(
+        (data)=>{
+            setInfo(data)
+        }
+    )
+}
+
 const ajouterReser=async(infos,setErr)=>{
     infos.price=parseInt(infos.price)
     infos.status=parseInt(infos.status)
@@ -226,6 +274,7 @@ const getRes=async(query,setRes)=>{
     )
 }
 
+
 module.exports={
     addCar,
     findCars,
@@ -240,5 +289,8 @@ module.exports={
     acceptDemande,
     getRes,
     getDash,
-    getDash2
+    getDash2,
+    deleteClient,
+    modifyClient,
+    findClient
 }

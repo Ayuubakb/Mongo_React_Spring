@@ -112,6 +112,18 @@ const updateMan=async(e,login,infos,setErr)=>{
 }
 
 
+const findClient=async(setInfo, id)=>{
+    const response=await fetch("http://localhost:9090/clients/getClient/"+id,{
+        method:"GET",
+        credentials:"include"
+    })
+    await response.json().then(
+        (data)=>{
+            setInfo(data)
+        }
+    )
+}
+
 
 module.exports={
     ajouterManager,
@@ -120,5 +132,6 @@ module.exports={
     findMan,
     updateMan,
     getAdminDash,
-    getRanking
+    getRanking,
+    findClient
 }

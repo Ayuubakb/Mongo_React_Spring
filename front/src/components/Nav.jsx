@@ -26,9 +26,10 @@ const Nav = () => {
                 <>
                     <Link to="/manager/"><li><i class="fa-solid fa-house"></i></li></Link>
                     <Link to="/manager/voitures/ajouterVoitures"><li>Add Car</li></Link>
-                    <Link to="/manager/voitures"><li>Cars List</li></Link>
+                    <Link to="/manager/voitures"><li>Cars</li></Link>
                     <Link to="/manager/demandes"><li>Demandes</li></Link>
-                    <Link to="/manager/reservations"><li>Reservations List</li></Link>
+                    <Link to="/manager/reservations"><li>Reservations</li></Link>
+                    <Link to="/manager/clients"><li>Clients</li></Link>
                 </>   
                 }
             </ul>

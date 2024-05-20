@@ -13,7 +13,7 @@ const ModifierMan = () => {
         let idT=setTimeout(()=>{ 
             findMan(login,setInfos);
         },700)
-        return ()=>clearTimeout()
+        return ()=>clearTimeout(idT)
     },[])
     const handleClick=(e)=>{
         updateMan(e,login,infos,setErr);

@@ -13,4 +13,6 @@ public interface ClientRepository extends MongoRepository<client, ObjectId> {
     List<client> findByEmail(String email);
     @Query("{id:?0}")
     client findClientById(ObjectId id);
+    @Query("{status:?0}")
+    List<client> findByStatus(int status);
 }

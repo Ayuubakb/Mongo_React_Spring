@@ -6,7 +6,6 @@ import ListeMan from './pages/Admin/ListeMan';
 import ModifierMan from './pages/Admin/ModifierMan';
 import ManDash from './pages/Manager/ManDash';
 import CarsList from './pages/Manager/CarsList';
-import ClientsList from './pages/Manager/ClientsList';
 import UpdateCar from './pages/Manager/UpdateCar';
 import ResList from './pages/Manager/ResList';
 import Demandes from './pages/Manager/Demandes';
@@ -18,7 +17,8 @@ import { checkLogin } from './controllers/Authentification';
 import AddCar from './pages/Manager/AddCar';
 import Car from './pages/Manager/Car';
 import AddRes from './pages/Manager/AddRes';
-import Factures from './pages/Manager/Factures';
+import Clients from './pages/Manager/Clients';
+import ModifierClient from './pages/Manager/ModifierClient';
 
 function App() {
   const [isLogged,setIsLogged]=useState(null);
@@ -54,7 +54,8 @@ function App() {
                       <Route path='modifierVoiture' element={<UpdateCar/>}/>
                       <Route path='ajouterReservation' element={<AddRes/>}/>
                     </Route>
-                    <Route path='clients' element={<ClientsList/>}/>
+                    <Route path='clients' element={<Clients/>}/>
+                    <Route path='updateClient' element={<ModifierClient/>}/>
                     <Route path='reservations' element={<ResList/>}/>
                     <Route path='demandes' element={<Demandes/>}/>
                   </Route>

@@ -261,7 +261,12 @@ nav .out button{
   gap: 10px;
   padding: 10px;
 }
-.OneManager{
+.oneClient{
+  width: 80%;
+  margin-left: 10%;
+  margin-bottom: 15px;
+}
+.OneManager, .oneClient{
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -275,10 +280,10 @@ nav .out button{
   color: rgb(29, 29, 29); 
   font-weight: bold;
 }
-.OneManager .info {
+.OneManager .info, .oneClient .infos  {
   flex: 0 0 80%;
 }
-.OneManager .info div{
+.OneManager .info div, .oneClient .infos {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -295,13 +300,19 @@ nav .out button{
   background-color: wheat;
   border-radius: 10px;
 }
-.OneManager div span{
+.oneClient p{
+  color: rgb(31, 31, 31);
+  font-family: var(--fontSmall);
+  font-size: 17px;
+  font-weight: bold;
+}
+.OneManager div span, .oneClient span{
   color: var(--blue);
-  font-size: 20px;
+  font-size: 20px; 
   font-family: var(--fontBig);
   font-style: italic;
 }
-.OneManager .btns{
+.OneManager .btns, .oneClient .btns{
   flex: 0 0 10%;
   display: flex;
   flex-direction: row;
@@ -309,7 +320,7 @@ nav .out button{
   justify-content: space-around;
   align-items: center;
 }
-.OneManager .btn{
+.OneManager .btn, .oneClient .btn{
   border-radius: 5px;
   background-color: #CF0A0A;
   padding: 5px;

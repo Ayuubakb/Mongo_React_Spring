@@ -90,44 +90,6 @@ public class CarController {
         carRepository.deleteById(id);
         return new ResponseEntity<>("Deleted",HttpStatus.OK);
     }
-   /* com.server.ApiMongodb.bookingRepository bookingRepository;
-
-    @GetMapping("/cars")
-    public List<Car> getCars(){
-        return carRepository.findAll();
-    }
-
-    @PutMapping("/updateCar/{id}")
-    public void updateCar(@PathVariable ObjectId id, @RequestBody Car car){
-        carRepository.deleteById(id);
-        carRepository.save(car);
-    }
-//  get  available car
-    @GetMapping("/availableCars")
-    public List<Car> getAvailableCars(){
-        return carRepository.findByAvailable(true);
-    }
-    @GetMapping("/availableCars/{start_date}/{end_date}")
-    public List<Car> getAvailableCars(@PathVariable String start_date, @PathVariable String end_date){
-        LocalDate startDate = LocalDate.parse(start_date);
-        LocalDate endDate = LocalDate.parse(end_date);
-
-        List<booking> allBookings = bookingRepository.findAll();
-        List<ObjectId> bookedCarIds = allBookings.stream()
-            .filter(b -> b.getStart_date().isBefore(endDate) && b.getEnd_date().isAfter(startDate))
-            .map(booking::getId_car)
-            .distinct()
-            .collect(Collectors.toList());
-
-        List<Car> allCars = carRepository.findAll();
-        List<Car> availableCars = allCars.stream()
-            .filter(c -> !bookedCarIds.contains(c.getId()))
-            .collect(Collectors.toList());
-
-        return availableCars;
-    }
-*/
-
 
 
 
