@@ -1,11 +1,12 @@
 package com.server.ApiMongodb.Model;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Manager extends user{
     private String firstName;
     private String lastName;
-    private Date joiningDate;
+    private Date joiningDate= java.sql.Date.valueOf(LocalDate.now());
     private float salary;
     private String branch;
 
