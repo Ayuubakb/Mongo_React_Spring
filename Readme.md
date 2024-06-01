@@ -21,22 +21,22 @@ Some other Specialities :
 
 ## Conception
 - Class Diagram
-![Alt text](Assets\Class.png)
+![Alt text](Assets/Class.png)
 - Use Case Diagram
-![Alt text](Assets\Use.png)
+![Alt text](Assets/Use.png)
 
 ## Demo
-![Alt text](Assets\img1.png)
-![Alt text](Assets\img2.png)
-![Alt text](Assets\img3.png)
-![Alt text](Assets\img4.png)
-![Alt text](Assets\img5.png)
-![Alt text](Assets\img6.png)
-![Alt text](Assets\img7.png)
-![Alt text](Assets\img8.png)
-![Alt text](Assets\img9.png)
-![Alt text](Assets\img10.png)
-![Alt text](Assets\img11.png)
+![Alt text](Assets/img1.png)
+![Alt text](Assets/img2.png)
+![Alt text](Assets/img3.png)
+![Alt text](Assets/img4.png)
+![Alt text](Assets/img5.png)
+![Alt text](Assets/img6.png)
+![Alt text](Assets/img7.png)
+![Alt text](Assets/img8.png)
+![Alt text](Assets/img9.png)
+![Alt text](Assets/img10.png)
+![Alt text](Assets/img11.png)
 
 
 
