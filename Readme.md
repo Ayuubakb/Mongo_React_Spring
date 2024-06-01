@@ -8,10 +8,10 @@ For manager 👨‍💼:
 - Add Car :pencil2:
 - Add Reservation ➕
 - Manage Clients (CRUD)
-- Check stats 📊 provided by in dashbord
+- Check stats 📊 provided by in dashbord \
 For Admin 🛠️: 
 - Manage Managers 👨‍💼 (CRUD)
-- Check managers Performance and Revenue 📊
+- Check managers Performance and Revenue 📊 \
 Some other Specialities ⚙️ : 
 - ⚠️ : To be A client 👤 you have to rent at least a car, that's why when adding reservation the manager can either chose an existing client or to add a new client -> A client can be added only during the reservation process
 - Before each reservation, the system checks if the car is already booked or not.
