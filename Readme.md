@@ -2,17 +2,17 @@
 # CarRental 🚗
 
 Car Rental Application with designated for agency managers and administrator the functionalities : \
-For manager 👨‍💼: 
+--> For manager 👨‍💼: 
 - Login :lock:
 - View Cars with Filter / View Single Car 👁️
 - Add Car :pencil2:
 - Add Reservation ➕
 - Manage Clients (CRUD)
 - Check stats 📊 provided by in dashbord \
-For Admin 🛠️: 
+--> For Admin 🛠️: 
 - Manage Managers 👨‍💼 (CRUD)
 - Check managers Performance and Revenue 📊 \
-Some other Specialities ⚙️ : 
+--> Some other Specialities ⚙️ : 
 - ⚠️ : To be A client 👤 you have to rent at least a car, that's why when adding reservation the manager can either chose an existing client or to add a new client -> A client can be added only during the reservation process
 - Before each reservation, the system checks if the car is already booked or not.
 - After a reservation is made, it status is "appending" and waiting for the same or other manager to confirm it .
@@ -26,12 +26,12 @@ Some other Specialities ⚙️ :
 ![Alt text](Assets/Use.png)
 
 ## Demo
-- **ADMIN** :
+- **ADMIN 🛠️** :
 ![Alt text](Assets/img1.png)
 ![Alt text](Assets/img2.png)
 ![Alt text](Assets/img3.png)
 ![Alt text](Assets/img4.png)
-- **MANAGER** : 
+- **MANAGER 👨‍💼** : 
 ![Alt text](Assets/img5.png)
 ![Alt text](Assets/img12.png)
 ![Alt text](Assets/img6.png)
