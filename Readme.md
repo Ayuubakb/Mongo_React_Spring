@@ -26,11 +26,14 @@ Some other Specialities :
 ![Alt text](Assets/Use.png)
 
 ## Demo
+- ADMIN :
 ![Alt text](Assets/img1.png)
 ![Alt text](Assets/img2.png)
 ![Alt text](Assets/img3.png)
 ![Alt text](Assets/img4.png)
+- Manager : 
 ![Alt text](Assets/img5.png)
+![Alt text](Assets/img12.png)
 ![Alt text](Assets/img6.png)
 ![Alt text](Assets/img7.png)
 ![Alt text](Assets/img8.png)
